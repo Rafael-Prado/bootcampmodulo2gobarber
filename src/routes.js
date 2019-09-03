@@ -7,6 +7,7 @@ import authMiddleware from './app/middlewares/auth';
 import ProvidersControlle from './app/controllers/ProvidersController';
 import FileControlle from './app/controllers/FileController';
 import AppointmentController from './app/controllers/AppointmentController';
+import ScheduleController from './app/controllers/ScheduleController';
 
 const routes = new Router();
 const upload = multer(multerConfig);
@@ -22,5 +23,7 @@ routes.get('/providers', ProvidersControlle.index);
 
 routes.get('/appointments', AppointmentController.index);
 routes.post('/appointments', AppointmentController.store);
+
+routes.get('/schedule', ScheduleController.index);
 
 export default routes;
