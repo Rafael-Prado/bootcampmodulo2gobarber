@@ -48,6 +48,12 @@ class AppointmentController {
       where: { id: provider_id, provider: true },
     });
 
+    if (req.userId === provider_id) {
+      return res
+        .status(400)
+        .json({ error: 'Appointment not permitted to provider' });
+    }
+
     const hourStart = startOfHour(parseISO(date));
     if (isBefore(hourStart, new Date())) {
       return res.status(400).json({ error: 'Past dates are not permitted' });
