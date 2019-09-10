@@ -133,9 +133,10 @@ class AppointmentController {
     appointment.canceled_at = new Date();
     await appointment.save();
 
-    await Queue.add(CancellationMail.Key, {
-      appointment,
-    });
+    // Erro aqui
+    // await Queue.add(CancellationMail.Key, {
+    //   appointment,
+    // });
 
     return res.json(appointment);
   }
