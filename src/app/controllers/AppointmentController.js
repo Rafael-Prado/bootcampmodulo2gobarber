@@ -134,9 +134,9 @@ class AppointmentController {
     await appointment.save();
 
     // Erro aqui
-    // await Queue.add(CancellationMail.Key, {
-    //   appointment,
-    // });
+    await Queue.add(CancellationMail.Key, {
+      appointment,
+    });
 
     return res.json(appointment);
   }

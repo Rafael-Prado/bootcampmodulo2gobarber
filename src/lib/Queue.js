@@ -7,7 +7,6 @@ const jobs = [CancellationMail];
 class Queue {
   constructor() {
     this.queues = {};
-
     this.init();
   }
 
