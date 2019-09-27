@@ -5,7 +5,7 @@ module.exports = {
   host: process.env.DB_HOST,
   port: '5432',
   username: process.env.DB_USER,
-  password: process.env.DB_PASS,
+  password: 'docker',
   database: process.env.DB_NAME,
   define: {
     timestamps: true,

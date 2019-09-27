@@ -3,7 +3,7 @@ import pt from 'date-fns/locale/pt';
 import Mail from '../../lib/Mail';
 
 class CancellationMail {
-  get Key() {
+  get key() {
     return 'CancellationMail';
   }
 
